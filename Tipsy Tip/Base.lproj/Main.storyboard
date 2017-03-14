@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CAs-eZ-k5b">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tipsy Tips-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tipsy_Tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter bill amount:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeM-DF-D0k">
+                                <rect key="frame" x="20" y="83" width="280" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCI-bn-EM9">
+                                <rect key="frame" x="100" y="112" width="24" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7i-7y-VVj">
+                                <rect key="frame" x="122" y="115" width="97" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="billChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Uxz-k1-MtO"/>
+                                    <outletCollection property="gestureRecognizers" destination="f6w-MO-m8X" appends="YES" id="KWP-A3-uws"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip Tab:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEo-ak-i5o">
+                                <rect key="frame" x="111" y="193" width="98" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EiI-Ct-H0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KWn-4Y-Bfr">
+                                <rect key="frame" x="42" y="222" width="236" height="29"/>
+                                <segments>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="tipsClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="j4q-wt-21W"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You Pay:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa1-Nq-ecz">
+                                <rect key="frame" x="113" y="359" width="94" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$ 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWY-Uh-MMd">
+                                <rect key="frame" x="82" y="388" width="156" height="33"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Value:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuF-iD-aET">
+                                <rect key="frame" x="20" y="309" width="109" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaJ-g5-txR">
+                                <rect key="frame" x="206" y="309" width="94" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TEo-ak-i5o" secondAttribute="trailing" constant="91" id="3xL-nt-LeZ"/>
+                            <constraint firstItem="g7i-7y-VVj" firstAttribute="top" secondItem="PeM-DF-D0k" secondAttribute="bottom" constant="24" id="6uJ-HZ-wQe"/>
+                            <constraint firstItem="jCI-bn-EM9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="AWA-ZQ-RU9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KWn-4Y-Bfr" secondAttribute="trailing" constant="22" id="CoC-Ly-ezR"/>
+                            <constraint firstItem="KWn-4Y-Bfr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="Fae-AB-iQN"/>
+                            <constraint firstItem="KWn-4Y-Bfr" firstAttribute="top" secondItem="TEo-ak-i5o" secondAttribute="bottom" constant="8" symbolic="YES" id="LTI-aS-UF8"/>
+                            <constraint firstItem="TEo-ak-i5o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="91" id="Mc1-yq-mmP"/>
+                            <constraint firstItem="TEo-ak-i5o" firstAttribute="top" secondItem="g7i-7y-VVj" secondAttribute="bottom" constant="48" id="MsN-4t-XfA"/>
+                            <constraint firstItem="TEo-ak-i5o" firstAttribute="centerX" secondItem="Aa1-Nq-ecz" secondAttribute="centerX" id="PMb-no-2DR"/>
+                            <constraint firstItem="g7i-7y-VVj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="102" id="Q58-5e-6ou"/>
+                            <constraint firstItem="PeM-DF-D0k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="R42-6S-w7y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jCI-bn-EM9" secondAttribute="trailing" constant="176" id="Whj-PY-8L4"/>
+                            <constraint firstItem="KWn-4Y-Bfr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="Y9P-0S-QLE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PeM-DF-D0k" secondAttribute="trailing" constant="25" id="hhC-N6-waw"/>
+                            <constraint firstItem="TEo-ak-i5o" firstAttribute="centerX" secondItem="tWY-Uh-MMd" secondAttribute="centerX" id="k12-6l-XNc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KWn-4Y-Bfr" secondAttribute="trailing" constant="22" id="n7f-Ek-xOu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g7i-7y-VVj" secondAttribute="trailing" constant="81" id="px3-aP-yOH"/>
+                            <constraint firstItem="jCI-bn-EM9" firstAttribute="top" secondItem="PeM-DF-D0k" secondAttribute="bottom" constant="19" id="sYl-cX-ShB"/>
+                            <constraint firstItem="TEo-ak-i5o" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="193" id="z9j-tZ-owF"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AvJ-qV-Njg" appends="YES" id="MS8-Hl-0dG"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tipsy Tips" id="Sep-mV-fPD">
+                        <barButtonItem key="backBarButtonItem" title=" " id="CSx-U5-DFh"/>
+                        <barButtonItem key="rightBarButtonItem" title="&gt;&gt;" style="plain" id="OHJ-cz-xeR">
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="gFj-zG-ZMf" kind="push" id="k6m-lq-YTl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="billTxt" destination="g7i-7y-VVj" id="bIR-Os-kkc"/>
+                        <outlet property="settingsBtn" destination="OHJ-cz-xeR" id="gPD-6X-a3m"/>
+                        <outlet property="tipTab" destination="KWn-4Y-Bfr" id="PeE-T2-Q0B"/>
+                        <outlet property="tipValueLbl" destination="TaJ-g5-txR" id="TAa-JC-TpG"/>
+                        <outlet property="youPayLbl" destination="tWY-Uh-MMd" id="Yw5-Pf-eTZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AvJ-qV-Njg">
+                    <connections>
+                        <action selector="tapDone:" destination="BYZ-38-t0r" id="BKs-eq-1C3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="f6w-MO-m8X">
+                    <connections>
+                        <action selector="billTxtTapped:" destination="BYZ-38-t0r" id="8r5-Cj-gxU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1076" y="366"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="USh-tU-bgW">
+            <objects>
+                <viewController id="gFj-zG-ZMf" customClass="SettingsViewController" customModule="Tipsy_Tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ddg-EK-j31"/>
+                        <viewControllerLayoutGuide type="bottom" id="51R-QF-ROy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HJu-dR-QBV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alter tip options here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaC-Ps-ttd">
+                                <rect key="frame" x="20" y="80" width="256" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip option 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIb-h4-XOe">
+                                <rect key="frame" x="20" y="109" width="143" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip option 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaj-KH-zX6">
+                                <rect key="frame" x="20" y="138" width="143" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip option 3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je3-PL-ppL">
+                                <rect key="frame" x="20" y="167" width="143" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkl-uW-WUe">
+                                <rect key="frame" x="162" y="105" width="49" height="30"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="tip1defaultChanged:" destination="gFj-zG-ZMf" eventType="editingChanged" id="3Fa-f7-nFL"/>
+                                    <outletCollection property="gestureRecognizers" destination="lUj-UP-hkJ" appends="YES" id="gT0-eo-NF0"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="njs-Nw-yvZ">
+                                <rect key="frame" x="162" y="136" width="49" height="30"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="tip2DefaultChanged:" destination="gFj-zG-ZMf" eventType="editingChanged" id="I39-Dj-m4B"/>
+                                    <outletCollection property="gestureRecognizers" destination="jY1-sZ-Kqk" appends="YES" id="t5F-UE-41E"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZcZ-pc-6kf">
+                                <rect key="frame" x="162" y="167" width="49" height="30"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="openKeyboard:" destination="gFj-zG-ZMf" eventType="editingDidEnd" id="fVl-Km-dbs"/>
+                                    <action selector="tip3DefaultChanged:" destination="gFj-zG-ZMf" eventType="editingChanged" id="uQq-Zc-77x"/>
+                                    <outletCollection property="gestureRecognizers" destination="6go-ml-THI" appends="YES" id="eVZ-ZN-vHr"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV0-rm-Ffl">
+                                <rect key="frame" x="217" y="110" width="13" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDR-dm-IYc">
+                                <rect key="frame" x="217" y="140" width="13" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQZ-ZC-yo0">
+                                <rect key="frame" x="217" y="171" width="13" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-tI-bSa">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Save" id="7ia-vY-lK0">
+                                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="saveClicked:" destination="gFj-zG-ZMf" id="B3m-fn-iDm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VIx-FL-mVM"/>
+                                    <barButtonItem title="Item" systemItem="trash" id="VOl-CG-PcA">
+                                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="trashClicked:" destination="gFj-zG-ZMf" id="ztd-9W-hr5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select default tip option:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuI-dx-Qmg">
+                                <rect key="frame" x="20" y="245" width="271" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FqW-xP-Qfo">
+                                <rect key="frame" x="50" y="274" width="220" height="29"/>
+                                <segments>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2cl-F2-W40" appends="YES" id="XKF-H9-0Rd"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Settings" id="pbF-Ur-zZe">
+                        <barButtonItem key="backBarButtonItem" title=" " id="w8W-Sg-h5d"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="defaultTipTab" destination="FqW-xP-Qfo" id="Oy6-Lc-rdZ"/>
+                        <outlet property="tip1Txt" destination="bkl-uW-WUe" id="oWR-M1-y6h"/>
+                        <outlet property="tip2Txt" destination="njs-Nw-yvZ" id="LhW-L0-vKU"/>
+                        <outlet property="tip3Txt" destination="ZcZ-pc-6kf" id="FSP-TI-Fgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ze0-3P-7oO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2cl-F2-W40">
+                    <connections>
+                        <action selector="tapOutside:" destination="gFj-zG-ZMf" id="UBe-NV-Jdp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lUj-UP-hkJ">
+                    <connections>
+                        <action selector="openKeyboard:" destination="gFj-zG-ZMf" id="OOK-4l-BKh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jY1-sZ-Kqk">
+                    <connections>
+                        <action selector="openKeyboard:" destination="gFj-zG-ZMf" id="AxG-kr-G8A"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6go-ml-THI"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="350"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Atu-sQ-pI7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CAs-eZ-k5b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d8y-Ou-Ws7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2A1-pW-E93"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8A7-mw-cY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="366"/>
+        </scene>
+    </scenes>
+</document>
